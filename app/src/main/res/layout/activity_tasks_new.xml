@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_month_wr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/january">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tool_bar"
+        style="@style/Widget.MyApp.ActionBarD"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@android:color/transparent"
+        android:elevation="4dp"
+        android:textColor="#ff8a8a8a" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/month_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="January 2015"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/months_pager"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+
+                ></android.support.v4.view.ViewPager>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/add_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|bottom|end"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:onClick="addNewTask"
+                android:src="@mipmap/ic_add_circle_white_24dp" />
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
